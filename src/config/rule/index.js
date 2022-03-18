@@ -23,9 +23,13 @@ import space from './space';
 import tab from './tab';
 import button from './button';
 import editor from './editor';
+import testComp from './test-comp';
+import tableBox from './table-box';
 
 
 const ruleList = {
+    [tableBox.name]: tableBox,
+    [testComp.name]: testComp,
     [radio.name]: radio,
     [checkbox.name]: checkbox,
     [input.name]: input,

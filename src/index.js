@@ -3,6 +3,8 @@ import DragTool from './components/DragTool.vue';
 import Struct from './components/Struct.vue';
 import Fetch from './components/Fetch.vue';
 import Validate from './components/Validate.vue';
+import TestComp from './components/TestComp';
+import TableBox from './components/TableBox';
 import DragBox from './components/DragBox.vue';
 import formCreate from '@form-create/element-ui';
 import FcEditor from '@form-create/component-wangeditor';
@@ -18,6 +20,9 @@ formCreate.component('Validate', Validate);
 formCreate.component('Struct', Struct);
 formCreate.component('Fetch', Fetch);
 formCreate.component('FcEditor', FcEditor);
+
+formCreate.component('TestComp', TestComp);
+formCreate.component('TableBox', TableBox);
 
 formCreate.register('_fc', {
     init(fc, rule) {

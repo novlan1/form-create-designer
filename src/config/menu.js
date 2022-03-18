@@ -21,6 +21,8 @@ import space from './rule/space';
 import button from './rule/button';
 import editor from './rule/editor';
 import tab from './rule/tab';
+import testComp from './rule/test-comp';
+import tableBox from './rule/table-box';
 
 export default function createMenu() {
     return [
@@ -28,7 +30,7 @@ export default function createMenu() {
             name: 'main',
             title: '表单组件',
             list: [
-                input, number, radio, checkbox, select, _switch, time, date, slider, rate, color, cascader, upload, transfer, tree, editor
+                input, number, radio, checkbox, select, _switch, time, date, slider, rate, color, cascader, upload, transfer, tree, editor,testComp, tableBox
             ]
         },
         {

@@ -1,143 +1,147 @@
 <style>
 ._fc-designer {
-    height: 100%;
-    min-height: 500px;
-    overflow: hidden;
-    cursor: default;
-    position: relative;
+  height: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  cursor: default;
+  position: relative;
 }
 
 ._fc-designer > .el-main {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px;
 }
 
 ._fc-m .form-create ._fc-l-item {
-    background: #2E73FF;
-    width: 100%;
-    height: 10px;
-    overflow: hidden;
-    transition: all .3s ease;
+  background: #2e73ff;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-._fc-l, ._fc-m, ._fc-r {
-    border-top: 1px solid #ECECEC;
-    box-sizing: border-box;
+._fc-l,
+._fc-m,
+._fc-r {
+  border-top: 1px solid #ececec;
+  box-sizing: border-box;
 }
 
 ._fc-l-group {
-    padding: 0 12px;
+  padding: 0 12px;
 }
 
 ._fc-l-title {
-    font-weight: 600;
-    font-size: 14px;
-    margin: 18px 0px 5px;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 18px 0px 5px;
 }
 
 ._fc-l-item {
-    display: inline-block;
-    background: #FFF;
-    color: #000;
-    min-width: 70px;
-    width: 33.33%;
-    height: 70px;
-    line-height: 1;
-    text-align: center;
-    transition: all .2s ease;
-    cursor: pointer;
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  min-width: 70px;
+  width: 33.33%;
+  height: 70px;
+  line-height: 1;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 ._fc-l-item i {
-    font-size: 21px;
-    display: inline-block;
+  font-size: 21px;
+  display: inline-block;
 }
 
 ._fc-l-item ._fc-l-name {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 ._fc-l-item ._fc-l-icon {
-    padding: 10px 5px 12px;
+  padding: 10px 5px 12px;
 }
 
 ._fc-l-item:hover {
-    background: #2E73FF;
-    color: #fff;
+  background: #2e73ff;
+  color: #fff;
 }
 
 ._fc-m-tools {
-    height: 40px;
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    border: 1px solid #ECECEC;
-    border-top: 0 none;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid #ececec;
+  border-top: 0 none;
 }
 
 ._fc-m-tools button.el-button {
-    padding: 5px 14px;
-    display: flex;
-    align-items: center;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
 }
 
 ._fc-m-tools .fc-icon {
-    font-size: 14px;
-    margin-right: 2px;
+  font-size: 14px;
+  margin-right: 2px;
 }
 
 ._fc-r .el-tabs__nav-wrap::after {
-    height: 1px;
-    background-color: #ECECEC;
+  height: 1px;
+  background-color: #ececec;
 }
 
 ._fc-r ._fc-r-tabs {
-    display: flex;
-    padding: 0;
-    border-bottom: 1px solid #ECECEC;
+  display: flex;
+  padding: 0;
+  border-bottom: 1px solid #ececec;
 }
 
 ._fc-r ._fc-r-tab {
-    height: 40px;
-    box-sizing: border-box;
-    line-height: 40px;
-    display: inline-block;
-    list-style: none;
-    font-size: 14px;
-    font-weight: 600;
-    color: #303133;
-    position: relative;
-    flex: 1;
-    text-align: center;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+  display: inline-block;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #303133;
+  position: relative;
+  flex: 1;
+  text-align: center;
 }
 
 ._fc-r ._fc-r-tab.active {
-    color: #409EFF;
-    border-bottom: 2px solid #409EFF;
+  color: #409eff;
+  border-bottom: 2px solid #409eff;
 }
 
 .drag-box {
-    min-height: 60px;
+  min-height: 60px;
 }
 
 ._fc-m-drag {
-    overflow: auto;
-    padding: 2px;
-    box-sizing: border-box;
+  overflow: auto;
+  padding: 2px;
+  box-sizing: border-box;
 }
 
-._fc-m-drag, .draggable-drag {
-    background: #fff;
-    height: 100%;
-    position: relative;
+._fc-m-drag,
+.draggable-drag {
+  background: #fff;
+  height: 100%;
+  position: relative;
 }
 
-._fc-m-drag > form, ._fc-m-drag > form > .el-row {
-    height: 100%;
+._fc-m-drag > form,
+._fc-m-drag > form > .el-row {
+  height: 100%;
 }
 </style>
 
@@ -172,7 +176,7 @@
                                    @click="clearDragRule">清 空
                         </el-button>
                     </el-header>
-                    <ElMain style="background: #F5F5F5;padding: 20px;">
+                    <ElMain style="background: #F5F5F5;padding: 20px;" v-if="showMain">
                         <div class="_fc-m-drag">
                             <FormCreate :rule="dragForm.rule" :option="form.value"
                                         v-model="dragForm.api"></FormCreate>
@@ -220,7 +224,6 @@
 </template>
 
 <style>
-
 </style>
 
 <script>
@@ -346,6 +349,7 @@ export default {
                     }
                 }
             },
+            showMain: true,
         };
     },
     watch: {
@@ -355,7 +359,16 @@ export default {
                     this.preview.rule = this.preview.option = null;
                 });
             }
+        },
+        dragForm: {
+            deep: true,
+            handler: (val) => {
+                // console.log('val',val, JSON.stringify(val));
+            }
         }
+    },
+    mounted() {
+        window.FC = this;
     },
     methods: {
         addMenu(config) {
@@ -475,7 +488,7 @@ export default {
         clearDragRule() {
             this.setRule([]);
         },
-        makeDragRule(children) {
+        makeDragRule(children, isSlot) {
             return [this.makeDrag(true, 'draggable', children, {
                 add: (inject, evt) => this.dragAdd(children, evt),
                 end: (inject, evt) => this.dragEnd(children, evt),
@@ -484,7 +497,8 @@ export default {
             }, {
                 props: {
                     name: 'fade',
-                    tag: 'div'
+                    tag: 'div',
+                    isSlot
                 }
             })];
         },
@@ -537,7 +551,6 @@ export default {
                     rule = this.makeRule(config, rule);
                     if (_children) {
                         let children = rule.children[0].children;
-
                         if (config.drag) {
                             children = children[0].children;
                         }
@@ -567,7 +580,7 @@ export default {
                 }
                 if (!rule) return initial;
                 rule = {...rule};
-                if (rule.children.length) {
+                if (rule.children && rule.children.length) {
                     rule.children = this.parseRule(rule.children);
                 }
 
@@ -635,6 +648,13 @@ export default {
                     this.$set(this.activeRule.props, field, value);
                 }
             }
+            if (!this[`changed-${field}`]) {
+                this.showMain = false;
+                setTimeout(() => {
+                    this.showMain = true;
+                    this[`changed-${field}`]= true;
+                });
+            }
         },
         validateChange(formData) {
             if (!this.activeRule || this.validateForm.api[this.activeRule._id] !== this.activeRule) return;
@@ -693,8 +713,12 @@ export default {
             }
         },
         dragAdd(children, evt) {
+            // console.log('add', children, evt, children.name, evt.target.className);
+            const isSlot =  evt.target.className.includes('slot-drag');
+
             const newIndex = evt.newIndex;
             const menu = evt.item._underlying_vm_;
+            console.log('menu', menu, menu.name);
             if (!menu) {
                 if (this.addRule) {
                     const rule = this.addRule.children.splice(this.addRule.oldIndex, 1);
@@ -702,7 +726,15 @@ export default {
                 }
             } else {
                 const rule = this.makeRule(ruleList[menu.name]);
+                console.log('added rule', rule);
                 children.splice(newIndex, 0, rule);
+                if (isSlot) {
+                    this.showMain = false;
+                    setTimeout(() => {
+                        this.showMain = true;
+                    }, 0);
+                }
+                
             }
             this.added = true;
         },
@@ -726,12 +758,46 @@ export default {
 
             if (config.drag) {
                 const children = [];
-                rule.children.push(drag = this.makeDrag(config.drag, rule.type, children, {
-                    end: (inject, evt) => this.dragEnd(inject.self.children, evt),
-                    add: (inject, evt) => this.dragAdd(inject.self.children, evt),
-                    start: (inject, evt) => this.dragStart(inject.self.children, evt),
-                    unchoose: (inject, evt) => this.dragUnchoose(inject.self.children, evt),
-                }));
+
+                if (rule.children.length) {
+                    const list = [];
+                    rule.children.map(item => {
+                        if (item.type) {
+                            const tempRule = this.makeRule(ruleList[item.type]);
+                            // console.log('tempRule',tempRule, );// {}
+
+                            const tempRule2 = this.makeDragRule([tempRule], item.slot);
+                            // console.log('tempRule2',tempRule2, );// []
+                            tempRule2[0].slot = item.slot;
+                            list.push(...tempRule2);
+                        } else {
+                            const tempRule = this.makeDrag(config.drag, 'draggable', [], {
+                                end: (inject, evt) => this.dragEnd(inject.self.children, evt),
+                                add: (inject, evt) => this.dragAdd(inject.self.children, evt),
+                                start: (inject, evt) => this.dragStart(inject.self.children, evt),
+                                unchoose: (inject, evt) => this.dragUnchoose(inject.self.children, evt),
+                            }, {
+                                name: 'fade',
+                                tag: 'div',
+                                isSlot: item.slot
+                            });
+                            // console.log('tempRuletempRule',tempRule);
+                            tempRule.slot = item.slot;
+                            list.push(tempRule);
+                        }
+                        
+                    });
+                    // console.log('rule.children', rule.children, list);
+                    rule.children = list;
+                } else {
+                    rule.children.push(drag = this.makeDrag(config.drag, rule.type, children, {
+                        end: (inject, evt) => this.dragEnd(inject.self.children, evt),
+                        add: (inject, evt) => this.dragAdd(inject.self.children, evt),
+                        start: (inject, evt) => this.dragStart(inject.self.children, evt),
+                        unchoose: (inject, evt) => this.dragUnchoose(inject.self.children, evt),
+                    }));
+                }
+              
             }
 
             if (config.children && !_rule) {
@@ -790,6 +856,10 @@ export default {
                     inject: true,
                     on: {
                         delete: ({self}) => {
+                            this.showMain = false;
+                            setTimeout(() => {
+                                this.showMain = true;
+                            });
                             self.__fc__.rm();
                             this.clearActiveRule();
                         },
